@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="profile-picture.jpg" alt="Profile Picture" class="profile-img" id="profile-img">
+        <button class="edit-profile" onclick="toggleProfileEdit()">Edit Profile</button>
+      </div>
+      <div id="profile-edit" class="profile-edit" style="display: none;">
+        <form id="profile-form">
+          <label for="profile-name">Name:</label>
+          <input type="text" id="profile-name" name="profile-name" placeholder="Enter your name">
+          
+          <label for="profile-picture">Profile Picture:</label>
+          <input type="file" id="profile-picture" name="profile-picture" onchange="changeProfilePicture(event)">
+          
+          <button type="submit" onclick="saveProfile()">Save</button>
+        </form>
+      </div>
+      <h2>Do-it</h2>
+      <div class="menu">
+        <p>Today tasks</p>
+        <ul>
+          <li><span class="color personal"></span> Personal</li>
+          <li><span class="color freelance"></span> Freelance</li>
+          <li><span class="color work"></span> Work</li>
+        </ul>
+        <p>Scheduled tasks</p>
+        <p>Settings</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <div class="header">
+        <h3>Today Main Focus</h3>
+        <h4>Design Team Meeting</h4>
+      </div>
+      <div class="task-list">
+        <div class="task">
+          <input type="checkbox" id="task1">
+          <label for="task1">Work Out</label>
+          <span class="time">8:00 AM</span>
+        </div>
+        <div class="task">
+          <input type="checkbox" id="task2">
+          <label for="task2">Design Team Meeting</label>
+          <span class="time">2:30 PM</span>
+        </div>
+        <div class="task">
+          <input type="checkbox" id="task3">
+          <label for="task3">Hand off the project</label>
+          <span class="time">7:00 PM</span>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    // Toggle profile edit form
+    function toggleProfileEdit() {
+      const profileEdit = document.getElementById('profile-edit');
+      profileEdit.style.display = profileEdit.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Change profile picture
+    function changeProfilePicture(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const profileImg = document.getElementById('profile-img');
+        profileImg.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // Save profile (optional functionality to process form data)
+    function saveProfile(event) {
+      event.preventDefault();
+      // You can add logic to save the name and other details here
+      alert('Profile saved!');
+      toggleProfileEdit();  // Close the edit form after saving
+    }
+  </script>
+</body>
+</html>

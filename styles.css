@@ -1,0 +1,168 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5ff;
+  color: #333;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #a18aff;
+  color: white;
+  padding: 20px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu p {
+  margin: 15px 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 5px 0;
+}
+
+.color {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.personal {
+  background-color: #fd99af;
+}
+
+.freelance {
+  background-color: #3fd4f4;
+}
+
+.work {
+  background-color: #fac608;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  background-color: #e5e5ff;
+  padding: 20px;
+}
+
+.header h3 {
+  color: #a18aff;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task input {
+  margin-right: 10px;
+}
+
+.task .time {
+  color: #888;
+}
+/* Profile image style */
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Profile section */
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.edit-profile {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-profile:hover {
+  background-color: #45a049;
+}
+
+/* Profile edit form */
+.profile-edit {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.profile-edit form {
+  display: inline-block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.profile-edit label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.profile-edit input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.profile-edit button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-edit button:hover {
+  background-color: #45a049;
+}
